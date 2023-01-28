@@ -27,3 +27,5 @@ aws s3 sync s3://SOURCE-BUCKET-NAME s3://DESTINATION-BUCKET-NAME --source-region
 The above command should be executed with destination AWS IAM user account credentials only otherwise the copied objects in destination S3 bucket will still have the source account permissions and won’t be accessible by destination account users.
 
 
+
+NOTE:  #Always use "s3:GetObjectTagging" option otherwise it will through an error "An error occurred (AccessDenied) when calling the GetObjectTagging operation: Access Denied
