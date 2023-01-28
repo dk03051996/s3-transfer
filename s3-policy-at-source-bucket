@@ -9,7 +9,12 @@
             },
             "Action": [
                 "s3:ListBucket",
-                "s3:GetObject"
+                "s3:GetObject",
+                "s3:GetObjectTagging",
+                "s3:GetObjectVersionTagging",
+                "s3:GetObjectVersion",
+                "s3:PutObjectTagging"
+            ],
             ],
             "Resource": [
                 "arn:aws:s3:::SOURCE_BUCKET_NAME/*",
@@ -18,3 +23,6 @@
         }
     ]
 }
+
+
+# always use "s3:GetObjectTagging" option otherwise it will throw some error and not copy all the files.
