@@ -22,5 +22,7 @@ Step 5: Sync S3 objects to destination
 If above steps are completed, we can copy S3 bucket objects from source account to destination account by using the following AWS CLI command.
 
 aws s3 sync s3://SOURCE-BUCKET-NAME s3://DESTINATION-BUCKET-NAME --source-region SOURCE-REGION-NAME --region DESTINATION-REGION-NAME
+
+
 The above command should be executed with destination AWS IAM user account credentials only otherwise the copied objects in destination S3 bucket will still have the source account permissions and won’t be accessible by destination account users.
 
