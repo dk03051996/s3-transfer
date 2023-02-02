@@ -5,7 +5,7 @@
             "Sid": "DelegateS3Access",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::DESTINATION_BUCKET_ACCOUNT_NUMBER:root"
+                "AWS": "arn:aws:iam::45677:user/di"
             },
             "Action": [
                 "s3:ListBucket",
@@ -15,10 +15,9 @@
                 "s3:GetObjectVersion",
                 "s3:PutObjectTagging"
             ],
-            ],
             "Resource": [
-                "arn:aws:s3:::SOURCE_BUCKET_NAME/*",
-                "arn:aws:s3:::SOURCE_BUCKET_NAME"
+                "arn:aws:s3:::source-bucket/*",
+                "arn:aws:s3:::source-bucket"
             ]
         }
     ]
